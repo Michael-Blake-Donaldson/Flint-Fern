@@ -13,7 +13,11 @@ export function FieldGuideClient() {
   useEffect(() => {
     const stored = window.localStorage.getItem("bakbone-field-guide");
     if (stored) {
-      try { setSelected(JSON.parse(stored)); } catch { /* Keep safe defaults. */ }
+      try {
+        const parsed = JSON.parse(stored);
+        const timer = window.setTimeout(() => setSelected(parsed), 0);
+        return () => window.clearTimeout(timer);
+      } catch { /* Keep safe defaults. */ }
     }
   }, []);
 

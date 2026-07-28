@@ -24,8 +24,47 @@ test("server-renders the Bakbone homepage", async () => {
 });
 
 test("server-renders core product routes", async () => {
-  for (const path of ["/explore", "/learn", "/identify", "/field-guide", "/entry/building-a-basic-campfire"]) {
+  for (const path of ["/explore", "/learn", "/identify", "/field-guide"]) {
     const response = await render(path);
     assert.equal(response.status, 200, path);
+  }
+});
+
+const entrySlugs = [
+  "building-a-basic-campfire",
+  "black-bear",
+  "baseplate-compass",
+  "hypothermia",
+  "white-tailed-deer-track",
+  "water-purification",
+  "lightning-safety",
+  "fixed-blade-knife",
+  "brook-trout",
+  "contour-lines",
+  "food-storage",
+  "poison-ivy",
+];
+
+test("every published card has a complete entry route", async () => {
+  for (const slug of entrySlugs) {
+    const response = await render(`/entry/${slug}`);
+    assert.equal(response.status, 200, slug);
+    const html = await response.text();
+    assert.match(html, /Practical meaning/i, slug);
+    assert.match(html, /Safety &amp; limits/i, slug);
+    assert.match(html, /Field-ready check/i, slug);
+    assert.match(html, /Sources &amp; review record/i, slug);
+    assert.match(html, /Next review:/i, slug);
+    assert.match(html, /Report a correction/i, slug);
+    assert.match(html, /Interactive three-dimensional model/i, slug);
+  }
+});
+
+test("explore cards and home suggestions link directly to entries", async () => {
+  for (const path of ["/", "/explore"]) {
+    const response = await render(path);
+    const html = await response.text();
+    assert.doesNotMatch(html, /\/explore\?q=American%20Black%20Bear/i);
+    assert.match(html, /\/entry\/black-bear/i);
   }
 });

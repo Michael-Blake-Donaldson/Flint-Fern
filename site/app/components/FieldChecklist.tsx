@@ -2,20 +2,12 @@
 
 import { useState } from "react";
 
-const checks = [
-  "Current fire rules and site restrictions checked",
-  "Water and extinguishing tools are within reach",
-  "The fire area is clear above and around the ring",
-  "Fuel is gathered before ignition",
-  "A responsible adult will remain present",
-];
-
-export function FieldChecklist() {
+export function FieldChecklist({ title, checks }: { title: string; checks: string[] }) {
   const [done, setDone] = useState<string[]>([]);
   return (
     <div className="readiness-check">
       <div className="readiness-head">
-        <div><p className="kicker dark-kicker">Field-ready check</p><h2>Before any flame</h2></div>
+        <div><p className="kicker dark-kicker">Field-ready check</p><h2>{title}</h2></div>
         <strong>{done.length}/{checks.length}</strong>
       </div>
       {checks.map((item) => (
@@ -32,4 +24,3 @@ export function FieldChecklist() {
     </div>
   );
 }
-

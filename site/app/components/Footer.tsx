@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -6,7 +7,7 @@ export function Footer() {
       <div className="shell footer-grid">
         <div>
           <Link className="brand footer-brand" href="/">
-            <img className="brand-logo" src="/bakbone-logo-256.png" alt="" width="44" height="44" />
+            <Image className="brand-logo" src="/bakbone-logo-256.png" alt="" width={44} height={44} unoptimized />
             <span>Bakbone</span>
           </Link>
           <p>The outdoors deserves to be understood—not merely consumed.</p>
@@ -20,10 +21,10 @@ export function Footer() {
         </div>
         <div>
           <h2>Our standard</h2>
-          <a href="/#trust">Methodology</a>
-          <a href="/#trust">Sources & review</a>
-          <a href="mailto:corrections@bakbone.example">Report a correction</a>
-          <a href="/#mission">Mission</a>
+          <Link href="/#trust">Methodology</Link>
+          <Link href="/#trust">Sources & review</Link>
+          <Link href="/explore">Report a correction</Link>
+          <Link href="/#mission">Mission</Link>
         </div>
       </div>
       <div className="shell footer-bottom">

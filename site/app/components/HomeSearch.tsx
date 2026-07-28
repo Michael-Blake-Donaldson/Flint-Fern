@@ -42,7 +42,7 @@ export function HomeSearch() {
             <button
               key={entry.slug}
               type="button"
-              onClick={() => router.push(entry.slug === "building-a-basic-campfire" ? `/entry/${entry.slug}` : `/explore?q=${encodeURIComponent(entry.title)}`)}
+              onClick={() => router.push(`/entry/${entry.slug}`)}
             >
               <span>{entry.title}</span>
               <small>{entry.type} · {entry.domain}</small>
@@ -54,4 +54,3 @@ export function HomeSearch() {
     </div>
   );
 }
-

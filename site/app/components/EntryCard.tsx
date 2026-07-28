@@ -2,9 +2,7 @@ import Link from "next/link";
 import type { Entry } from "../content";
 
 export function EntryCard({ entry, compact = false }: { entry: Entry; compact?: boolean }) {
-  const href = entry.slug === "building-a-basic-campfire"
-    ? `/entry/${entry.slug}`
-    : `/explore?q=${encodeURIComponent(entry.title)}`;
+  const href = `/entry/${entry.slug}`;
 
   return (
     <article className={`entry-card entry-card--${entry.tone} ${compact ? "entry-card--compact" : ""}`}>
@@ -28,4 +26,3 @@ export function EntryCard({ entry, compact = false }: { entry: Entry; compact?: 
     </article>
   );
 }
-

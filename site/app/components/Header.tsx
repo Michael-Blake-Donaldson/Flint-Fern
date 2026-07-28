@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -20,7 +21,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
     <header className={`site-header ${dark ? "site-header--dark" : ""}`}>
       <div className="shell header-inner">
         <Link className="brand" href="/" aria-label="Bakbone home">
-          <img className="brand-logo" src="/bakbone-logo-256.png" alt="" width="40" height="40" />
+          <Image className="brand-logo" src="/bakbone-logo-256.png" alt="" width={40} height={40} priority unoptimized />
           <span>Bakbone</span>
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
