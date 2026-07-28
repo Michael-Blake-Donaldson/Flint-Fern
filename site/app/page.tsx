@@ -29,7 +29,7 @@ export default function Home() {
               </p>
               <HomeSearch />
             </div>
-            <FireModel />
+            <FireModel variant="hero" />
           </div>
           <div className="shell hero-status">
             <span><b>1,240</b> connected entries</span>
@@ -113,7 +113,7 @@ export default function Home() {
               <Link className="button button--canvas" href="/entry/building-a-basic-campfire">Open Firecraft entry <span>→</span></Link>
             </div>
             <div className="feature-model">
-              <FireModel />
+              <FireModel variant="exhibit" />
               <div className="model-label">
                 <span>01</span>
                 <div><strong>Stable flame</strong><small>Balanced heat, fuel & oxygen</small></div>
@@ -165,7 +165,7 @@ export default function Home() {
         <section className="trust-section section" id="trust">
           <div className="shell trust-grid">
             <div className="trust-statement" id="mission">
-              <p className="kicker">Why trust WildAtlas?</p>
+              <p className="kicker">Why trust Bakbone?</p>
               <h2>Trust is not a badge.<br />It is a visible process.</h2>
             </div>
             <div className="trust-points">
@@ -199,4 +199,3 @@ export default function Home() {
     </>
   );
 }
-

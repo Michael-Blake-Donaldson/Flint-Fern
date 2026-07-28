@@ -33,7 +33,7 @@ export default function CampfireEntryPage() {
                 <div><strong>Expert reviewed</strong><small>Last reviewed July 24, 2026 · Caution</small></div>
               </div>
             </div>
-            <FireModel />
+            <FireModel variant="entry" />
           </div>
         </section>
         <div className="shell entry-layout">
@@ -106,7 +106,7 @@ export default function CampfireEntryPage() {
                 <li><a href="https://www.fs.usda.gov/visit/know-before-you-go/fire" rel="noreferrer">U.S. Forest Service · Fire safety</a><span>Official source · Accessed July 2026</span></li>
                 <li><a href="https://lnt.org/why/7-principles/minimize-campfire-impacts/" rel="noreferrer">Leave No Trace · Minimize campfire impacts</a><span>Authoritative secondary · Accessed July 2026</span></li>
               </ol>
-              <div className="review-record"><span>✓</span><div><strong>Reviewed for structure, safety, and source quality</strong><p>Next scheduled review: July 2027, or earlier upon authoritative change.</p></div><a href="mailto:corrections@wildatlas.example?subject=Correction%3A%20Building%20a%20Basic%20Campfire">Report a correction</a></div>
+              <div className="review-record"><span>✓</span><div><strong>Reviewed for structure, safety, and source quality</strong><p>Next scheduled review: July 2027, or earlier upon authoritative change.</p></div><a href="mailto:corrections@bakbone.example?subject=Correction%3A%20Building%20a%20Basic%20Campfire">Report a correction</a></div>
             </section>
           </article>
         </div>
@@ -121,4 +121,3 @@ export default function CampfireEntryPage() {
     </>
   );
 }
-

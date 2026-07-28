@@ -11,7 +11,7 @@ export function FieldGuideClient() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("wildatlas-field-guide");
+    const stored = window.localStorage.getItem("bakbone-field-guide");
     if (stored) {
       try { setSelected(JSON.parse(stored)); } catch { /* Keep safe defaults. */ }
     }
@@ -26,7 +26,7 @@ export function FieldGuideClient() {
   }
 
   function save() {
-    window.localStorage.setItem("wildatlas-field-guide", JSON.stringify(selected));
+    window.localStorage.setItem("bakbone-field-guide", JSON.stringify(selected));
     setSaved(true);
     setMessage(`Field guide saved on this device: ${selected.length} entries, approximately ${estimatedSize} MB.`);
   }
@@ -70,4 +70,3 @@ export function FieldGuideClient() {
     </div>
   );
 }
-

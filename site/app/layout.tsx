@@ -11,12 +11,12 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase,
     title: {
-      default: "WildAtlas — The outdoors, understood.",
-      template: "%s · WildAtlas",
+      default: "Bakbone — The outdoors, understood.",
+      template: "%s · Bakbone",
     },
     description:
       "A trusted, interconnected encyclopedia for the skills, species, tools, hazards, and systems that shape the wild.",
-    applicationName: "WildAtlas",
+    applicationName: "Bakbone",
     keywords: [
       "outdoor encyclopedia",
       "field guide",
@@ -27,17 +27,18 @@ export async function generateMetadata(): Promise<Metadata> {
     ],
     openGraph: {
       type: "website",
-      title: "WildAtlas — The outdoors, understood.",
+      title: "Bakbone — The outdoors, understood.",
       description: "Trusted outdoor knowledge, built for discovery and the field.",
-      siteName: "WildAtlas",
-      images: [{ url: new URL("/og.png", metadataBase).toString(), width: 1734, height: 907, alt: "WildAtlas — The outdoors, understood, over a calm mountain wilderness and controlled campfire." }],
+      siteName: "Bakbone",
+      images: [{ url: new URL("/og-bakbone.png", metadataBase).toString(), width: 1727, height: 911, alt: "Bakbone — The outdoors, understood, over a calm mountain wilderness and controlled campfire." }],
     },
     twitter: {
       card: "summary_large_image",
-      title: "WildAtlas — The outdoors, understood.",
+      title: "Bakbone — The outdoors, understood.",
       description: "Trusted outdoor knowledge, built for discovery and the field.",
-      images: [new URL("/og.png", metadataBase).toString()],
+      images: [new URL("/og-bakbone.png", metadataBase).toString()],
     },
+    icons: { icon: "/favicon.png", shortcut: "/favicon.png" },
     robots: { index: true, follow: true },
   };
 }
@@ -53,4 +54,3 @@ export default function RootLayout({
     </html>
   );
 }
-

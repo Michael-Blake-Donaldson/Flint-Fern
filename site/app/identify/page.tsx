@@ -11,7 +11,7 @@ export default function IdentifyPage() {
           <div className="shell">
             <p className="kicker dark-kicker">Trait-based identification</p>
             <h1>Observe first.<br />Compare carefully.</h1>
-            <p>Narrow possible species and signs by visible characteristics. WildAtlas explains why a result matches—and where uncertainty remains.</p>
+            <p>Narrow possible species and signs by visible characteristics. Bakbone explains why a result matches—and where uncertainty remains.</p>
           </div>
         </section>
         <section className="shell identify-section">
@@ -22,4 +22,3 @@ export default function IdentifyPage() {
     </>
   );
 }
-

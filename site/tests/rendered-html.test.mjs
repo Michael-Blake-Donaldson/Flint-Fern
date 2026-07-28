@@ -12,11 +12,11 @@ async function render(path = "/") {
   );
 }
 
-test("server-renders the WildAtlas homepage", async () => {
+test("server-renders the Bakbone homepage", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   const html = await response.text();
-  assert.match(html, /<title>WildAtlas — The outdoors, understood\.<\/title>/i);
+  assert.match(html, /<title>Bakbone — The outdoors, understood\.<\/title>/i);
   assert.match(html, /The outdoors,/);
   assert.match(html, /Three ways into the wild/);
   assert.match(html, /Trust is not a badge/);
@@ -29,4 +29,3 @@ test("server-renders core product routes", async () => {
     assert.equal(response.status, 200, path);
   }
 });
-

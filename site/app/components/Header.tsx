@@ -19,9 +19,9 @@ export function Header({ dark = false }: { dark?: boolean }) {
   return (
     <header className={`site-header ${dark ? "site-header--dark" : ""}`}>
       <div className="shell header-inner">
-        <Link className="brand" href="/" aria-label="WildAtlas home">
-          <span className="brand-mark" aria-hidden="true">W</span>
-          <span>WildAtlas</span>
+        <Link className="brand" href="/" aria-label="Bakbone home">
+          <img className="brand-logo" src="/bakbone-logo-256.png" alt="" width="40" height="40" />
+          <span>Bakbone</span>
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           <Link href="/explore">Explore</Link>
@@ -30,7 +30,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
           <Link href="/field-guide">Field Guide</Link>
         </nav>
         <form className="header-search" role="search" onSubmit={submit}>
-          <label className="sr-only" htmlFor="header-search">Search WildAtlas</label>
+          <label className="sr-only" htmlFor="header-search">Search Bakbone</label>
           <input
             id="header-search"
             value={query}
@@ -53,7 +53,7 @@ export function Header({ dark = false }: { dark?: boolean }) {
       {open && (
         <div className="mobile-panel" id="mobile-navigation">
           <form className="mobile-search" role="search" onSubmit={submit}>
-            <label className="sr-only" htmlFor="mobile-search">Search WildAtlas</label>
+            <label className="sr-only" htmlFor="mobile-search">Search Bakbone</label>
             <input
               id="mobile-search"
               value={query}
@@ -73,4 +73,3 @@ export function Header({ dark = false }: { dark?: boolean }) {
     </header>
   );
 }
-

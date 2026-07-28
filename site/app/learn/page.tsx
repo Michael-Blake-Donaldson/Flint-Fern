@@ -49,7 +49,7 @@ export default function LearnPage() {
           <div className="shell principle-grid">
             <h2>No points.<br />No streaks.<br /><em>Just readiness.</em></h2>
             <div>
-              <p>WildAtlas learning guides are built to prepare you for responsible practice, not to manufacture engagement.</p>
+              <p>Bakbone learning guides are built to prepare you for responsible practice, not to manufacture engagement.</p>
               <ul>
                 <li>Visible prerequisites and safety context</li>
                 <li>Field-ready checklists, not abstract completion</li>
@@ -64,4 +64,3 @@ export default function LearnPage() {
     </>
   );
 }
-
